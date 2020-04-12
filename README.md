@@ -25,4 +25,4 @@ Example: `!skip`
 - Currently if a mapId is invalid the map is just skipped. Validation when the map is queued and feedback would be better.
 
 **How to use this script:**\
-To run this script you must have permissions in a tribehouse. In the tribehouse type /lua then paste all the text here into the pop up and press submit.
+To run this script you must have permissions in a tribehouse. In the tribehouse type /lua then paste all the text in map_queue.lua (found above) into the pop up and press submit.
