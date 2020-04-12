@@ -11,13 +11,14 @@ Example: `!cq @7702091` (the @ is optional)
 `!rq` -- Removes your map from the queue.\
 Example: `!rq`
 
-`!skip` -- To vote to skip the current map you must be alive; the command kills you in order to prevent exploitation. If the number of votes to skip exceeds the total number of players or the number of players still alive after the first 30 seconds of the game (after AFK players die) then the map will be skipped.\
+`!skip` -- To vote to skip the current map you must be alive; the command kills you in order to prevent exploitation. If the number of votes to skip exceeds the total number of players or the number of players still alive after the first 30 seconds of the game (after AFK players die) plus those who voted to skip then the map will be skipped.\
 Example: `!skip`
 
 **Notes:**
 - If the map queue is empty a random vanilla map will be selected.
 - If you leave the room your map will be removed from the queue and the vote skip system.
 - Feedback in the chat from commands is only available in verified modules (not in tribehouse) therefore cannot be implemented unless this module becomes official or semi-official (which would be pretty cool).
+- The voting system handels players being revived sensibly. You can't vote to skip more than once. Those who died in the first 30 seconds and were then revived are added to the "number of players still alive after the first 30 seconds of the game".
 
 **To add:**
 - Prevent the same map being queued multiple times in a row (maybe).
