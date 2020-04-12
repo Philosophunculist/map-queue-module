@@ -1,5 +1,5 @@
 # map-queue-module
-A LUA script for Transformice which allows players to queue maps of their choice.
+A LUA script for Transformice which allows players to queue maps of their choice. This project is still in alpha. Please make bug reports on this Git Hub page and suggestions as a reply to my post on the Transformice forum.
 
 **Commands:**\
 `!q [mapId]` -- Adds a map with ID [mapId] to a queue of the next maps to be played. Each player can have only one map queued at a time.\
