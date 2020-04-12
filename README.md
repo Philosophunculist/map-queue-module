@@ -5,7 +5,7 @@ A LUA script for Transformice which allows players to queue maps of their choice
 `!q [mapId]` -- Adds a map with ID [mapId] to a queue of the next maps to be played. Each player can have only one map queued at a time.\
 Example: `!q @7702091` (the @ is optional)
 
-`!cq [mapId]` -- -- e.g. Changes your queued map to a map with ID [mapId] without losing your place in the queue. Queues the map if you have no queued map already.\
+`!cq [mapId]` -- Changes your queued map to a map with ID [mapId] without losing your place in the queue. Queues the map if you have no queued map already.\
 Example: `!cq @7702091` (the @ is optional)
 
 `!rq` -- Removes your map from the queue.\
