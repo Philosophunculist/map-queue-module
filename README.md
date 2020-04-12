@@ -11,7 +11,7 @@ Example: `!cq @7702091` (the @ is optional)
 `!rq` -- Removes your map from the queue.\
 Example: `!rq`
 
-`!skip` -- To vote to skip the current map you must be alive; the command kills you in order to prevent exploitation. If you die (not due to typing !skip) or win before the first 30 seconds have passed (before AFK mice have died) then the voting system won't count you in the number of mice. If the number of votes exceed half of the number of mice then the map will be skipped.\
+`!skip` -- To vote to skip the current map you must be alive; the command kills you in order to prevent exploitation. If the number of votes to skip exceeds the total number of players or the number of players still alive after the first 30 seconds of the game (after AFK players die) then the map will be skipped.\
 Example: `!skip`
 
 **Notes:**
