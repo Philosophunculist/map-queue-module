@@ -5,6 +5,7 @@ mice_alive = 0
 loading = false
 NO_OF_VANILLA_MAPS = 143
 time_at_end_of_game = 0
+timer = 0
 
 -- skip related global vars
 skip_votes = 0
@@ -154,13 +155,13 @@ function eventNewGame()
   loading = true
 end
 
+-- called every 0.5 seconds.
 function eventLoop(timeElapsed, timeRemaining)
-
+  timer = timer + 0.5
   if timeElapsed > 3100 and not thirty_seconds_passed then
     thirty_seconds_passed = true
     checkSkipVote()
   end
-      
   if loading then
     -- if map has loaded and give time for tfm.get.room.playerList to update
     if timeElapsed < time_at_end_of_game and timeElapsed > 0 then
@@ -173,8 +174,7 @@ function eventLoop(timeElapsed, timeRemaining)
       skip_votes = 0 -- incase of voting to skip after a vote skip has passed
     end
   else
-    -- prevent loading map more than once every 3 seconds
-    if (timeRemaining <= 0 or mice_alive == 0) and timeElapsed > 3000 then
+    if (timeRemaining <= 0 or mice_alive == 0) and timer > 3 then
       time_at_end_of_game = timeElapsed
       if map_queue[1] then
         tfm.exec.newGame(table.remove(map_queue, 1))
@@ -186,6 +186,7 @@ function eventLoop(timeElapsed, timeRemaining)
         -- randomly sometimes fails to load a new map
         tfm.exec.newGame(math.random(0, NO_OF_VANILLA_MAPS))
       end
+      timer = 0
     end
   end
 end
