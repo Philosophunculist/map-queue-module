@@ -5,7 +5,7 @@ mice_alive = 0
 loading = false
 NO_OF_VANILLA_MAPS = 143
 time_at_end_of_game = 0
-timer = 0
+timer = 0 -- updated every half second in seconds since map attempted to load.
 
 -- skip related global vars
 skip_votes = 0
@@ -27,16 +27,6 @@ function checkSkipVote()
     end
     print("Skipping map.")
   end
-end
-
-function setMiceAlive()
-  local counter = 0
-  for _, data in next, tfm.get.room.playerList do
-    if not data.isDead then
-      counter = counter + 1
-    end
-  end
-  mice_alive = counter
 end
 
 function removeFromQueue(playerName)
@@ -66,6 +56,16 @@ function queueMap(playerName, mapId)
   print(playerName .. " queued map " .. mapId)
 end
 
+function setMiceAlive()
+  local counter = 0
+  for _, data in next, tfm.get.room.playerList do
+    if not data.isDead then
+      counter = counter + 1
+    end
+  end
+  mice_alive = counter
+end
+
 function eventPlayerLeft(playerName) -- leaving while alive triggers eventPlayerDied
   setMiceAlive()
   if player_set[playerName] then
@@ -93,7 +93,7 @@ eventPlayerWon = eventPlayerDied
 function eventPlayerRespawn(playerName)
   mice_alive = mice_alive + 1
   -- skip related
-  if died_or_won_before_thirty_seconds_set[playerName] then -- and therefor also not a skipper (see eventPlayerDied).
+  if died_or_won_before_thirty_seconds_set[playerName] then -- and therefore also not a skipper (see eventPlayerDied).
     died_or_won_before_thirty_seconds_set[playerName] = nil
     mice_alive_after_thirty_seconds = mice_alive_after_thirty_seconds + 1
   end
@@ -184,7 +184,7 @@ function eventLoop(timeElapsed, timeRemaining)
         player_set[player_queue[1]] = nil
         print("This map was queued by " .. table.remove(player_queue, 1))
       else
-        -- should use # categories when not in tribe house
+        -- should use # categories when official module
         print("Picking random vanilla map.")
         -- randomly sometimes fails to load a new map
         tfm.exec.newGame(math.random(0, NO_OF_VANILLA_MAPS))
