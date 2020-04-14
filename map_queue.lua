@@ -162,7 +162,10 @@ function eventLoop(timeElapsed, timeRemaining)
     thirty_seconds_passed = true
     checkSkipVote()
   end
-  if loading then
+  if loading then -- loading = true when eventNewGame() is triggered.
+    if timer > 20 then -- try a new map if stuck loading for 20s.
+      loading = false
+    end
     -- if map has loaded and give time for tfm.get.room.playerList to update
     if timeElapsed < time_at_end_of_game and timeElapsed > 0 then
       -- reset vars
