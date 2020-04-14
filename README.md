@@ -22,6 +22,7 @@ To run this script you must have permissions (/np is enough) in a tribehouse. In
 - If you leave the room your map will be removed from the queue and the vote skip system.
 - Feedback in the chat from commands is only available in verified modules (not in tribehouse) therefore cannot be implemented unless this module becomes official or semi-official (which would be pretty cool).
 - The voting system handels players being revived sensibly. You can't vote to skip more than once. Those who died in the first 30 seconds and were then revived are added to the "number of players still alive after the first 30 seconds of the game".
+- TOP TIP: /lsmap shows you the mapIds of all your maps.
 
 **To add:**
 - Prevent the same map being queued multiple times in a row (maybe).
