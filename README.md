@@ -15,7 +15,7 @@ Example: `!rq`
 Example: `!skip`
 
 **How to use this script:**\
-To run this script you must have permissions in a tribehouse. In the tribehouse type /lua then paste all the text in map_queue.lua (found above) into the pop up and press submit.
+To run this script you must have permissions (/np is enough) in a tribehouse. In the tribehouse type /lua then paste all the text in map_queue.lua (found above) into the pop up and press submit.
 
 **Notes:**
 - If the map queue is empty a random vanilla map will be selected.
