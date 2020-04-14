@@ -159,7 +159,7 @@ end
 function eventLoop(timeElapsed, timeRemaining)
   timer = timer + 0.5
   -- extra 100ms for afk players to die.
-  if timeElapsed > 3100 and not thirty_seconds_passed then
+  if timeElapsed > 30100 and not thirty_seconds_passed then
     print("Players alive after 30s" .. players_alive_after_thirty_seconds) -- debugging
     thirty_seconds_passed = true
     checkSkipVote()
