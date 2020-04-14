@@ -22,7 +22,7 @@ Example: `!skip`
 
 **To add:**
 - Prevent the same map being queued multiple times in a row (maybe).
-- Command to see the map queue.
+- Command to see the map queue (if the module becomes official).
 - Currently if a mapId is invalid the map is just skipped. Validation when the map is queued and feedback would be better.
 
 **How to use this script:**\
