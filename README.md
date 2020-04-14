@@ -14,6 +14,9 @@ Example: `!rq`
 `!skip` -- To vote to skip the current map you must be alive; the command kills you. These two factors prevent abuse of !skip. If the number of votes to skip exceeds the total number of players, or the number of players still alive after the first 30 seconds of the game (after AFK players die) plus dead players who voted to skip, then the map will be skipped.\
 Example: `!skip`
 
+**How to use this script:**\
+To run this script you must have permissions in a tribehouse. In the tribehouse type /lua then paste all the text in map_queue.lua (found above) into the pop up and press submit.
+
 **Notes:**
 - If the map queue is empty a random vanilla map will be selected.
 - If you leave the room your map will be removed from the queue and the vote skip system.
@@ -24,6 +27,3 @@ Example: `!skip`
 - Prevent the same map being queued multiple times in a row (maybe).
 - Command to see the map queue (if the module becomes official).
 - Currently if a mapId is invalid the map is just skipped. Validation when the map is queued and feedback would be better.
-
-**How to use this script:**\
-To run this script you must have permissions in a tribehouse. In the tribehouse type /lua then paste all the text in map_queue.lua (found above) into the pop up and press submit.
