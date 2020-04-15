@@ -28,3 +28,4 @@ To run this script you must have permissions (/np is enough) in a tribehouse. In
 - Prevent the same map being queued multiple times in a row (maybe).
 - Command to see the map queue (if the module becomes official).
 - Currently if a mapId is invalid the map is just skipped. Validation when the map is queued and feedback would be better.
+- If I am able to store player data I will add a way to save the mapIds of any map you play with a command
